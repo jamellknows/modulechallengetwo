@@ -1,0 +1,1308 @@
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/* This is the code provided */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+
+
+
+p {
+  margin: 0;
+}
+/* From here I do my best to emulate the demo */
+
+header{
+  background-color: darkslategray;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px 20px 0px;
+}
+
+header > h1 {
+  background-color:aquamarine;
+  color: darkslategray;
+  width: fit-content;
+  padding: 0px 5px 0px 30px;
+ 
+}
+
+nav {
+  margin: 0px 0px 0px 40vw;
+  display: flex;
+  
+  
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav > ul > li {
+  margin: 0px 5px 0px 5px;
+  padding: 0px 10px 0px 10px;
+
+  
+}
+nav > ul > li > a{
+  color: aquamarine;
+  text-decoration: underline;
+  list-style-type: none;
+  font-size: 25px;
+}
+
+
+/* Import hero banner image */
+.hero-banner{
+  height: 160px;
+  background-image: url("../images/02-hero-bg.jpg");
+}
+
+.hero-banner > div > h2{
+  position: relative;
+  left: 900px;
+  top: 120px;
+  background-color: aquamarine;
+  color: darkslategray;
+  width: fit-content;
+  padding: 0px 10px 0px 10px;
+}
+
+/* The layout is a grid of 2 columns  */
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 180px;
+}
+#about > h2{
+  border-right: 6px solid darkslategray;
+  font-size: 50px;
+  width: fit-content;
+  margin: 20px 0px 0px 10px;
+  color: darkslategray;
+
+}
+
+#about > p {
+  width: fit-content;
+  margin: 20px 0px 0px -330px; 
+  padding: 0px 150px 0px 0px;
+  font-size: 18px;
+  color: darkslategray;
+}
+
+#work > h2 {
+  border-right: 6px solid darkslategray;
+  font-size: 50px;
+  width: fit-content;
+  margin: 20px 10px 0px 10px;
+  padding: 0px 100px 0px 0px;
+  height: 100px;
+  color: darkslategray;
+
+}
+/* 2 column 3 colum grid like the demo */
+
+.page-section > .grid{
+  display: grid;
+  grid-template-columns:  400px 400px;
+  grid-template-rows: 500px 200px 200px;
+  grid-template-areas: 
+  "First First"
+  "Second Third"
+  "Fourth Fifth"
+  ;
+  grid-gap: 20px;
+  border-left: 6px solid darkslategray;
+  padding: 0px -100px 0px 100px;
+
+  position: relative;
+  left: 230px;
+
+
+}
+/* grid items and grid areas */
+
+.grid-item{
+  width: 100%;
+  border: 5px solid aquamarine;
+  opacity: 0.5;
+}
+
+.grid-item:hover{
+  opacity: 1.0;
+
+
+}
+#First{
+  grid-area: First;
+  background-image: url("../images/02-portfolio-1.jpg");
+ 
+}
+
+
+
+#Second{
+  grid-area: Second;
+  background-image: url("../images/02-portfolio-2.jpg");
+
+}
+
+#Third{
+  grid-area: Third;
+  background-image: url("../images/02-portfolio-3.jpg");
+
+}
+
+#Fourth{
+  grid-area: Fourth;
+  background-image: url("../images/02-portfolio-4.jpg");
+
+}
+
+#Fifth{
+  grid-area: Fifth;
+  background-image: url("../images/02-run-buddy.jpg");
+
+}
+
+.content > h4 {
+  font-size: 50px;
+  color: darkslategray;
+
+}
+
+.content > h6 {
+  font-size: 20px;
+  color: darkslategray;
+
+}
+
+/* css to produce a line */
+.margin-line{
+  border-right: 6px solid darkslategray;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#contact-grid{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  font-size: 30px;
+  text-decoration: none;
+  color: darkslategray;
+}
+
+
+
+.contact-me{
+  border-right: 6px solid darkslategray;
+  font-size: 40px;
+  color: darkslategray;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 14px 0px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+
+}
+
+.contact > #contact-grid > h4{
+  padding: 20px;
+  text-decoration: none;
+
+}
+
+a{
+  color: darkslategray;
+}
+
+/* media queries for mobile - using media queries helps make the webpage responsive. 
+media queries from 320px to 1280px
+*/
+@media only screen and (min-width:320px) , screen and (min-device-width:320px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  nav > ul >li > a{
+    font-size: 10px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 20px 10px -50px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 90px 90px;
+    grid-template-rows: 200px 100px 100px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 950px;
+    margin: 0px 50px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+
+  }
+
+}
+
+@media only screen and (min-width:360px) , screen and (min-device-width:360px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  nav > ul >li > a{
+    font-size: 10px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 20px 10px -50px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 90px 90px;
+    grid-template-rows: 200px 100px 100px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 950px;
+    margin: 0px 90px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+
+  }
+
+}
+
+@media only screen and (min-width:375px) , screen and (min-device-width:375px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  nav > ul >li > a{
+    font-size: 10px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 20px 10px -50px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 200px 100px 100px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 950px;
+    margin: 0px 100px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+
+  }
+
+}
+
+@media only screen and (min-width:390px) , screen and (min-device-width:390px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  nav > ul >li > a{
+    font-size: 10px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 20px 10px -50px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 200px 100px 100px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 950px;
+    margin: 0px 120px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+
+  }
+
+}
+
+@media only screen and (min-width:390px) , screen and (min-device-width:390px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  nav > ul >li > a{
+    font-size: 10px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 20px 10px -50px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 200px 100px 100px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 950px;
+    margin: 0px 120px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+
+  }
+
+}
+
+@media only screen and (min-width:414px) , screen and (min-device-width:414px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  nav > ul >li > a{
+    font-size: 10px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 20px 10px -50px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 200px 100px 100px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 950px;
+    margin: 0px 145px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+
+  }
+
+}
+
+@media only screen and (min-width:540px) , screen and (min-device-width:540px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  nav > ul >li > a{
+    font-size: 10px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 50px 10px -150px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 200px 100px 100px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 300px;
+    margin: 0px 150px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+
+  }
+
+}
+
+@media only screen and (min-width:768px) , screen and (min-device-width:768px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    justify-content: center;
+    margin: 0px 0px 0px 100px;
+  }
+  nav > ul >li > a{
+    font-size: 16px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 50px 10px -270px;
+    width: fit-content;
+    font-size: 15px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 270px 270px;
+    grid-template-rows: 300px 200px 200px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 0px 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 100px;
+    margin: 0px 80px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4 > a{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    width: fit-content;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+}
+
+@media only screen and (min-width:912px) , screen and (min-device-width:912px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    justify-content: center;
+    margin: 0px 0px 0px 100px;
+  }
+  nav > ul >li > a{
+    font-size: 16px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 50px 10px -330px;
+    width: fit-content;
+    font-size: 15px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 300px 200px 200px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 20px 0px 0px;
+    padding: 10px 10px 0px 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 100px;
+    margin: 0px 150px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4 > a{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+}
+
+@media only screen and (min-width:1280px) , screen and (min-device-width:1280px) {
+  
+  header{
+    padding: 0px;
+  }
+
+  header > h1{
+    padding: 0px;
+  }
+
+  nav {
+    margin: 0px;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    justify-content: center;
+    margin: 0px 0px 0px 100px;
+  }
+  nav > ul >li > a{
+    font-size: 16px;
+    width: fit-content;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+  }
+
+  .hero-banner{
+    height: 80px;
+  }
+
+  .hero-banner > div > h2{
+    left:0;
+    top:5px;
+  }
+
+ 
+
+  #about > h2 {
+    font-size: 20px;
+    margin: 0px 10px 20px 5px;
+    height: fit-content;
+    padding: 0px;
+  
+  }
+  #about > p {
+    height: fit-content;
+    margin: 10px 90px 10px -500px;
+    width: fit-content;
+    font-size: 15px;
+    padding: 0px;
+
+  }
+
+  #work > h2 {
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 35px; 
+
+  }
+
+  .page-section > .grid{
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    left: 93px;
+    grid-gap: 2px;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 300px 200px 200px;
+    margin: 0px 10px 20px 0px;
+  }
+
+  .content > h4 {
+    font-size: 12px;
+    
+  }
+
+  .content > h6 {
+    font-size: 10px;
+  }
+
+  #contact-grid{
+    font-size: 10px;
+    margin: 0px 20px 0px 0px;
+    padding: 10px 10px 0px 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-me{
+    font-size: 15px;
+    width: 100px;
+    margin: 0px 150px 0px 0px;
+    padding: 0px 10px 0px 0px;
+
+  }
+  
+  .contact > #contact-grid > h4 > a{
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 190px;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+}
+
